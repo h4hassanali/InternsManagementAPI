@@ -13,7 +13,7 @@ async def add_intern_service(intern_data: AddInternRequest):
 
 async def get_interns_service():
     interns = await Intern.find_all().to_list()
-    return [AddInternResponse(name=i.name, department=i.department) for i in interns]
+    return [AddInternResponse(name = i.name, department = i.department) for i in interns]
 
 
 
@@ -32,5 +32,5 @@ async def update_intern_service(intern_id: str, intern_data: AddInternRequest):
         intern.name = intern_data.name
         intern.department = intern_data.department
         await intern.save()
-        return AddInternResponse(name=intern.name, department=intern.department)
+        return AddInternResponse(name = intern.name, department = intern.department)
     return None

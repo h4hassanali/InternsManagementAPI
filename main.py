@@ -13,7 +13,7 @@ async def lifespan(app: FastAPI):
         client.close()
 
 
-app = FastAPI(lifespan=lifespan)
+app = FastAPI(lifespan = lifespan)
 
 
-app.include_router(intern_router, prefix="/intern")
+app.include_router(intern_router, prefix = "/intern")

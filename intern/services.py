@@ -1,4 +1,4 @@
-from intern.schemas import Intern
+from intern.models import Intern
 from intern.schemas import AddInternRequest, AddInternResponse
 from beanie import PydanticObjectId
 

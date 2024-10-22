@@ -11,5 +11,7 @@ async def lifespan(app: FastAPI):
         yield
     finally:
         client.close()
+
 app = FastAPI(lifespan = lifespan)
+
 app.include_router(intern_router, prefix = "/intern")

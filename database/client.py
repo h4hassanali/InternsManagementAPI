@@ -12,6 +12,5 @@ DATABASE_NAME = os.getenv("DATABASE_NAME")
 
 async def init_db():
     client = motor.motor_asyncio.AsyncIOMotorClient(MONGODB_URL)
-
     await beanie.init_beanie(database = client.DATABASE_NAME, document_models = [intern])
     return client
